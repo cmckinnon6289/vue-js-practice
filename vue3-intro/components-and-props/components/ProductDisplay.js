@@ -60,5 +60,11 @@ app.component('product-display', {
         inStock() {
             return this.variants[this.selectedVariant].quantity
         }
+    },
+    props: {
+      premium: {
+        type: Boolean,
+        required: true
+      }
     }
   })

@@ -3,6 +3,7 @@ const app = Vue.createApp({
       return {
          cart: 0,
          selectedVariant: 0,
+         onSale: false,
          product: 'Socks',
          brand: 'Vue Mastery',
          details: ['50% cotton', '30% wool', '20% polyester'],
@@ -25,6 +26,9 @@ const app = Vue.createApp({
    },
    computed: {
       title() {
+         if (this.onSale) {
+            return `${this.brand} ${this.product} is on sale!`
+         }
          return this.brand + ' ' + this.product;
       }, image() {
          return this.variants[this.selectedVariant].image;

@@ -6,11 +6,11 @@ const app = Vue.createApp({
       }
    },
    methods: {
-      addToCart() {
-         this.$emit('add-to-cart')
-      },
       updateCart(id) {
          this.cart.push(id);
+      },
+      removeCart(id) {
+         this.cart.splice(this.cart.find(id),1)
       }
    },
 })

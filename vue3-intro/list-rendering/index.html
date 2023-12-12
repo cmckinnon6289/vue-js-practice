@@ -25,7 +25,10 @@
                   <li v-for="detail in details">{{ detail }}</li>
                </ul>
                <ul>
-                  <li v-for="g in gdahghiadgiad" :key="g.id">{{ g.colour }}</li>
+                  <li v-for="variant in variants" :key="variant.id">{{ variant.colour }}</li>
+               </ul>
+               <ul>
+                  <li v-for="variant in variants" :key="variant.size"> {{ variant.size }}</li>
                </ul>
                <p v-if="inStock">In Stock</p>
                <p v-else>Out of Stock</p>
